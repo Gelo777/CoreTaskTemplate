@@ -92,6 +92,7 @@ public class UserServiceTest {
             userService.cleanUsersTable();
 
             if (userService.getAllUsers().size() != 0) {
+                System.out.println(userService.getAllUsers().get(0).getName());
                 Assert.fail("Метод очищения таблицы пользователей реализован не корректно");
             }
         } catch (Exception e) {
